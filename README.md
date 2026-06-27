@@ -27,6 +27,7 @@
 ![Android](https://img.shields.io/badge/Android-12%2B-7C3AED)
 ![License](https://img.shields.io/badge/License-MIT-FF5722)
 ![Release](https://img.shields.io/github/v/release/V0idream/MelodyGuard?include_prereleases)
+![Downloads](https://img.shields.io/github/downloads/V0idream/MelodyGuard/total)
 
 </div>
 
