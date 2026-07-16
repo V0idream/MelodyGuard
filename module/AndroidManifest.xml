@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codex.oplusmelody173hook"
-    android:versionCode="1"
-    android:versionName="1.0.0">
+    >
 
     <uses-sdk
         android:minSdkVersion="31"
@@ -19,7 +18,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="无线耳机 17.0.3：强制关闭耳机自决降噪并阻止云端白名单刷新" />
+            android:value="无线耳机 17.0.3：降噪 v2 回退、佩戴恢复与 Free4 EQ" />
         <meta-data
             android:name="xposedminversion"
             android:value="93" />

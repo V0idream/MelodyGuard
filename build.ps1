@@ -5,7 +5,9 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$BuildToolsDir,
 
-    [string]$Output = (Join-Path $PSScriptRoot 'dist\MelodyGuard-1.0.apk'),
+    [int]$VersionCode = 1,
+    [string]$VersionName = '1.0.0',
+    [string]$Output,
     [string]$Keystore = (Join-Path $PSScriptRoot '.keys\debug.jks'),
     [string]$KeyAlias = 'melodyguard-debug',
     [string]$StorePassword = 'android',
@@ -13,6 +15,11 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+if ([string]::IsNullOrWhiteSpace($Output)) {
+    $shortVersion = $VersionName -replace '\.0+$', ''
+    $Output = Join-Path $PSScriptRoot ("dist\MelodyGuard-{0}.apk" -f $shortVersion)
+}
 
 function Require-File([string]$Path) {
     if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) {
@@ -61,7 +68,7 @@ $hookJar = Join-Path $build 'hook-classes.jar'
 if ($LASTEXITCODE -ne 0) { throw 'D8 failed.' }
 
 $baseApk = Join-Path $build 'module-base.apk'
-& $aapt2 link -I $FrameworkPackage --manifest (Join-Path $PSScriptRoot 'module\AndroidManifest.xml') --min-sdk-version 31 --target-sdk-version 36 --version-code 1 --version-name 1.0.0 -o $baseApk
+& $aapt2 link -I $FrameworkPackage --manifest (Join-Path $PSScriptRoot 'module\AndroidManifest.xml') --min-sdk-version 31 --target-sdk-version 36 --version-code $VersionCode --version-name $VersionName -o $baseApk
 if ($LASTEXITCODE -ne 0) { throw 'AAPT2 failed.' }
 
 & $jar uf $baseApk -C $dexDir classes.dex -C (Join-Path $PSScriptRoot 'module') assets/xposed_init
