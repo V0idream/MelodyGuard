@@ -1,4 +1,4 @@
-# MelodyGuard
+# 🎧 MelodyGuard
 
 ### 面向 Oplus 无线耳机 17.0.3 的 LSPosed 降噪、佩戴与 EQ 运行时控制模块
 
@@ -16,6 +16,7 @@ Android · LSPosed · Oplus Wireless Earphones · runtime hooks
 [![LSPosed](https://img.shields.io/badge/LSPosed-API%2093%2B-6f42c1)](https://github.com/LSPosed/LSPosed)
 [![Target](https://img.shields.io/badge/target-Wireless%20Earphones%2017.0.3-1f6feb)](https://github.com/V0idream/MelodyGuard)
 [![License](https://img.shields.io/badge/license-MIT-2ea44f)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/V0idream/MelodyGuard)](https://github.com/V0idream/MelodyGuard/releases)
 
 ---
 
@@ -100,6 +101,10 @@ Version 2.0 keeps the 1.0 hooks and adds the verified behaviors from the supplie
 Install the official app from [this link](https://1811812159.mshare.123pan.cn/123pan/7AoDVv-O0U2H), install [`MelodyGuard-2.0.apk`](https://github.com/V0idream/MelodyGuard/releases/tag/v2.0), enable it in LSPosed, and scope it to `com.oplus.melody`. Release `v1.0` remains available.
 
 The module is not affiliated with OPPO/Oplus. Compatibility is verified only for Wireless Earphones 17.0.3 on Android 12+ with LSPosed API 93+.
+
+## ☕ 支持项目 / Support
+
+如果这个项目对你有帮助，欢迎点一个 Star。若愿意进一步支持项目维护，请参阅 [赞赏方式](docs/support.md)。支持完全自愿，不影响使用、Issue 交流或功能建议。
 
 ## License
 
